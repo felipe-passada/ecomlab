@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('/users', function () {
+    return view('users.index');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/users', 'UserController@getall');

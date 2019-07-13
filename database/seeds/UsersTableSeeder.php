@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
 
             DB::table('users')->insert([
                 'name' => $name,
-                'email' => Str::snake($name).'@email.com',
+                'email' => $faker->unique()->safeEmail,
                 'profile' => $faker->randomElement(
                     ['reseller','store']
                 ),
